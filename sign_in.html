@@ -9,7 +9,7 @@
             <a class = "button" href="#">More Info</a>
             <a class = "button2" href="#">Help</a>
 
-        </head>
+    </head>
 
 
 
@@ -37,7 +37,8 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-        document.location.href = "https://stackoverflow.com/questions/4202161/google-account-logout-and-redirect";  
+        window.location.href = "main_page.html";
+
       }
     </script>
   </body>
