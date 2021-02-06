@@ -1,5 +1,6 @@
 ﻿/*Insert:
  <button onclick = "writeUserData()">Submit</button>
+ <p id = "data"></p>
    into HTML,
    so that it calls the function(s) defined below.
 */
@@ -24,6 +25,7 @@ function getUserData() {
         {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
+            document.getElementById("data").innerHTML = childData['name'] + "," + childData ['age']  "," + childData ['gender'] + "," + childData ['weight'] + "," + childData ['height']
         }
     })
 }
