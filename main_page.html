@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>FitBot from Timmy!</title>
+<title>FitBot By Timmy!</title>
 
 <div class="nav-bar1">
     <body>
-        <a href="sign_in.html" onclick="signOut();">Sign out</a>
-        <a href="profile_form.html" onclick="signOut();">Profile</a>
+        <button id="sign-out-button" class = "button-1" >Sign out</a>
+        <button id="profile_button" class = "button-1">Edit Profile</a>
     </body>    
 </div>
+
+<script>
+    document.getElementById("sign-out-button").onclick = function () {
+        window.location.href = "sign_in.html";
+}
+    document.getElementById("profile_button").onclick = function () {
+        window.location.href = "profile_form.html";
+}
+</script>
 
 <style>
     .nav-bar1{
@@ -19,6 +28,21 @@
         background-color: rgb(240,128,128);
         
     }
+    .button-1{
+        background-color: rgb(240,128,128); /* Green */
+          border: none;
+          color: white;
+          padding: 15px 15px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+    }
+    .button1:hover{
+        background-color: azure;
+        color: black;
+    }
+
 </style>
 
 <meta charset="UTF-8">
@@ -55,6 +79,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       }
   </style>
 </header>
+
+
+<script> 
+
+//Timmy Chat-Bot implementation (SmartLoop.ai)
+
+(function(d) { window['recime-bot'] = 
+{"id":"4cdce4572654d7de2a4e30fbac8b8b47","title":"FitBot by Timmy","apiKey":"bf4fa3b0689711eb9e70cfbd8e186fa8","language":"en","primaryColor":"#f08080",
+"secondaryColor":"#eff4fa","icon":"comments","avatar":"https://icons.recime.io/4cdce4572654d7de2a4e30fbac8b8b47.png","greetingText":"Hi! How can we help you?",
+"greetingDelay":5,"playSound":true}; var s = d.createElement('script'); s.setAttribute('id', 'recime-chatbot-script');
+ s.setAttribute('src', 'https://webchat.smartloop.ai/shim.js'); s.setAttribute('async', 'async'); d.getElementsByTagName('body')[0].appendChild(s); })(document); 
+
+ </script>
 
 </body>
 </html>

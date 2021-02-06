@@ -1,15 +1,68 @@
+<!--Some parts of this HTML/CSS form were derived from https://freefrontend.com/css-forms/-->
 <!-- multistep form -->
 <form id="msform">
+
+	<script src = "https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+	<script src = "https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+	<script src = "sign_in.html"></script>
+
+
+<script>
+
+	var firebaseConfig = {
+		apiKey: "AIzaSyB2IuEftaeqrU6LdSjXbun1nvtIlb932fs",
+		authDomain: "fitbot-by-timmy.firebaseapp.com",
+		databaseURL: "https://fitbot-by-timmy-default-rtdb.firebaseio.com",
+		projectId: "fitbot-by-timmy",
+		storageBucket: "fitbot-by-timmy.appspot.com",
+		messagingSenderId: "80000126783",
+		appId: "1:80000126783:web:ea76b4c66cac5a86760d8a",
+		measurementId: "G-C0GYWQXGLK"
+	};
+
+		firebase.initializeApp(firebaseConfig);
+		/*document.getElementById("submitButton").onclick = function () {
+		window.location.href = "main_page.html";
+		}*/
+
+		function writeUserData() {
+		var test = "yo_mum";
+		var id = getUserId();
+		console.log("cam's mom's a bitch")
+		firebase.database().ref("User").set({
+		id: id,
+		name: document.getElementById("nameField").value,
+		age: document.getElementById("ageField").value,
+		gender: document.getElementById("genderField").value,
+		weight: document.getElementById("weightField").value,
+		height: document.getElementById("heightField").value
+	})
+	//getUserData();
+}
+
+
+</script>	
+
+
+
+
+
+
+
+	
     <fieldset>
       <h2 class="fs-title">Let's get to know you...</h2>
       <input type="text" name="name" placeholder="What should we call you?" id = "nameField"/>
       <input type="text" name="age" placeholder="How old might you be?" id = "ageField"/>
-      <input type="text" name="gender" placeholder="What gender do you identify as?" id = "genderField/"/>
+      <input type="text" name="gender" placeholder="What gender do you identify as?" id = "genderField"/>
       <input type="text" name="weight" placeholder="What is your weight in kilograms" id = "weightField" />
       <input type="text" name="height" placeholder="What is your height in meters?" id = "heightField" />
-      <input type="button" name="submit" onclick="writeData()" class="next action-button" value="Submit!" />
+      <input type="button" name="submit" onclick="writeUserData()" class="next action-button" value="Submit!" id = "submitButton"/>
     </fieldset>
   </form>
+
 
 
 <style>
@@ -145,5 +198,5 @@ body {
 }
   </style>
 
-<script src="form.js">
-</script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
