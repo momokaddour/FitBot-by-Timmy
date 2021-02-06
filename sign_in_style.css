@@ -1,0 +1,80 @@
+.box-1{
+
+    background-color: #333;
+    color:#fff;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+    color: #eee;
+    padding: 120px;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    animation: animation 100s linear infinite;
+
+    /*OVERWRITE*/
+
+    /*border: 5px red solid;*/
+
+    padding: 120px;
+    margin-top:0px;
+}
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+.box-1 h1{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:50px;
+    top: 80px;
+    text-align: center;
+}
+
+.box-1 p{
+    position:absolute;
+    font-size: 20px;
+    top:520px;
+    left:665px;
+}
+
+.button{
+    background: color 333px;;
+    color:#fff;
+    padding:5px 5px;
+    border:none;
+    position:absolute;
+    transition: .5s ease;
+    top: 95%;
+    left: 93%;
+}
+
+.button:hover{
+    background:white;
+    color:black;
+}
+
+.button2{
+    background: color 333px;;
+    color:#fff;
+    padding:5px 5px;
+    border:none;
+    position:absolute;
+    transition: .5s ease;
+    top: 95%;
+    left: 97%;
+}
+
+.button2:hover{
+    background:white;
+    color:black;
+}
+
+.g-signin2{
+    position:absolute;
+    transition: .5s ease;
+    top: 65%;
+    left: 46%;
+}
+
