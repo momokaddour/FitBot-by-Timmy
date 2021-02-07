@@ -5,11 +5,8 @@
         <title>FitBot by Timmy Landing</title>
         <link rel="stylesheet" type = "text/css" href="sign_in_style.css">
           <div class="box-1">         
-            <h1>FitBot by Timmy</h1>
-            <p>The COVID-19 bot who will fix that quarantine body in no time at all! </p>
-            <a class = "button" href="#">More Info</a>
+            <img src="TimmyBot2.png" alt="Logo">
             <a class = "button2" href="help.html">Help</a>
-
     </head>
 
 <!--Sign-in Functionality-->
@@ -21,9 +18,7 @@
   <body>
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-
   <script>
-    var id;
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
@@ -40,6 +35,8 @@
         gapi.auth2.getAuthInstance().signOut();
       };
 
+      window.location.href = "profile_form.html";
+
 
       id = googleUser.getAuthResponse().id_token;
       console.log("ID Token: " + id_token);
@@ -55,12 +52,8 @@
   
       */
 
-      window.location.href = "main_page.html";
 
-    }
 
-    export function getUserId() {
-      return id;
     }
 
     </script>

@@ -6,6 +6,7 @@
     <body>
         <button id="sign-out-button" class = "button-1" >Sign out</a>
         <button id="profile_button" class = "button-1">Edit Profile</a>
+        <button id="workout_button" class = "button-1">My Workout Log</a>
     </body>    
 </div>
 
@@ -15,6 +16,9 @@
 }
     document.getElementById("profile_button").onclick = function () {
         window.location.href = "profile_form.html";
+}
+    document.getElementById("workout_button").onclick = function () {
+        window.location.href = "stats.html";
 }
 </script>
 
@@ -37,6 +41,7 @@
           text-decoration: none;
           display: inline-block;
           font-size: 16px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .button1:hover{
         background-color: azure;
@@ -61,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="banner1" style="padding:128px 16px">
-  <h1 class="main-title">FitBot From Timmy!</h1>
+  <img src="TimmyBot2.png" alt="Logo">
   <style>
       .main-title{
           color:white;
@@ -71,7 +76,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           text-align: center;
       }
   </style>
-  <p class = "sub1">This is the first time setup...Say "Hi" to Timmy</p>
   <style>
       .sub1{
           color:white;

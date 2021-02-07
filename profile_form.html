@@ -1,12 +1,25 @@
 <!--Some parts of this HTML/CSS form were derived from https://freefrontend.com/css-forms/-->
 <!-- multistep form -->
-<form id="msform">
+
+
 
 	<script src = "https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
 
 	<script src = "https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
 
 	<script src = "sign_in.html"></script>
+
+	<script src="stats.html">
+		/*
+		var name = "Momo";
+		var queryString = "?para1=" + name;
+		window.location.href = "stats.html" + queryString;
+		var age = 0;
+		var gender = "";
+		var height = 0;
+		var weight = 0;
+		*/
+	</script>
 
 
 <script>
@@ -28,42 +41,54 @@
 		}*/
 
 		function writeUserData() {
-		var test = "yo_mum";
 		var id = getUserId();
-		console.log("cam's mom's a bitch")
 		firebase.database().ref("User").set({
 		id: id,
 		name: document.getElementById("nameField").value,
 		age: document.getElementById("ageField").value,
 		gender: document.getElementById("genderField").value,
 		weight: document.getElementById("weightField").value,
-		height: document.getElementById("heightField").value
+		height: document.getElementById("heightField").value,
+
 	})
 	//getUserData();
 }
+		myStorage = window.localStorage;
 
+		function passValues(){
+		var name = document.getElementById("nameField").value;
+		var age = document.getElementById("ageField").value;
+		var gender = document.getElementById("genderField").value;
+		var weight = document.getElementById("weightField").value; 
+		var height = document.getElementById("heightField").value;
+
+		localStorage.setItem("textvalue", name);
+		console.log("works!");
+		return false;
+		}
 
 </script>	
 
-
-
-
-
-
-
-	
+<form id="msform" action="stats.html">
     <fieldset>
       <h2 class="fs-title">Let's get to know you...</h2>
       <input type="text" name="name" placeholder="What should we call you?" id = "nameField"/>
       <input type="text" name="age" placeholder="How old might you be?" id = "ageField"/>
       <input type="text" name="gender" placeholder="What gender do you identify as?" id = "genderField"/>
+	  <!--
       <input type="text" name="weight" placeholder="What is your weight in kilograms" id = "weightField" />
       <input type="text" name="height" placeholder="What is your height in meters?" id = "heightField" />
-      <input type="button" name="submit" onclick="writeUserData()" class="next action-button" value="Submit!" id = "submitButton"/>
+	  -->
+      <input type="button" name="submit" onclick="passValues()" class="next action-button" value="Submit!" id = "submitButton"/>
     </fieldset>
-  </form>
+</form>
 
-
+  <script>
+	document.getElementById("submitButton").onclick = function () {
+       window.location.href = "main_page.html";
+	
+			myStorage = window.localStorage;}
+  </script>
 
 <style>
       /*custom font*/
