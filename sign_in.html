@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>FitBot by Timmy Landing</title>
+        <link rel="stylesheet" type = "text/css" href="sign_in_style.css">
+          <div class="box-1">         
+            <img src="TimmyBot2.png" alt="Logo">
+            <a class = "button2" href="help.html">Help</a>
+    </head>
+
+<!--Sign-in Functionality-->
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="90794624775-r3rimabkt15m8m1d0p4a7b1th2tfdj6s.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+  <script>
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+
+
+      // The ID token you need to pass to your backend:
+      window.onbeforeunload = function(e){
+        gapi.auth2.getAuthInstance().signOut();
+      };
+
+      window.location.href = "profile_form.html";
+
+
+      id = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+
+
+    }
+
+    </script>
+  </body>
+
+  
+  </div>
+
+</html>

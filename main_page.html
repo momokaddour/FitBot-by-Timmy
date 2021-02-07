@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>FitBot By Timmy!</title>
+
+<div class="nav-bar1">
+    <body>
+        <button id="sign-out-button" class = "button-1" >Sign out</a>
+        <button id="profile_button" class = "button-1">Edit Profile</a>
+        <button id="workout_button" class = "button-1">My Workout Log</a>
+    </body>    
+</div>
+
+<script>
+    //Redirection
+    document.getElementById("sign-out-button").onclick = function () {
+        window.location.href = "sign_in.html";
+}
+    document.getElementById("profile_button").onclick = function () {
+        window.location.href = "profile_form.html";
+}
+    document.getElementById("workout_button").onclick = function () {
+        window.location.href = "stats.html";
+}
+</script>
+
+<style>
+    .nav-bar1{
+        background-color: rgb(240,128,128);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .sign-out1{
+        background-color: rgb(240,128,128);
+        
+    }
+    .button-1{
+        background-color: rgb(240,128,128); /* Green */
+          border: none;
+          color: white;
+          padding: 15px 15px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .button1:hover{
+        background-color: azure;
+        color: black;
+    }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+
+<body>
+
+<!-- Header -->
+<header class="banner1" style="padding:128px 16px">
+  <img src="TimmyBot2.png" alt="Logo">
+  <style>
+      .main-title{
+          color:white;
+      }
+      .banner1{
+          background-color: rgb(240,128,128);
+          text-align: center;
+      }
+  </style>
+  <style>
+      .sub1{
+          color:white;
+          font-size: 20px;
+      }
+  </style>
+</header>
+
+
+<script> 
+
+//Timmy Chat-Bot implementation (SmartLoop.ai)
+
+    (function(d) { window['recime-bot'] = 
+    {"id":"4cdce4572654d7de2a4e30fbac8b8b47","title":"FitBot by Timmy","apiKey":"bf4fa3b0689711eb9e70cfbd8e186fa8","language":"en","primaryColor":"#f08080",
+    "secondaryColor":"#eff4fa","icon":"comments","avatar":"https://icons.recime.io/4cdce4572654d7de2a4e30fbac8b8b47.png","greetingText":"Hi! How can we help you?",
+    "greetingDelay":5,"playSound":true}; var s = d.createElement('script'); s.setAttribute('id', 'recime-chatbot-script');
+    s.setAttribute('src', 'https://webchat.smartloop.ai/shim.js'); s.setAttribute('async', 'async'); d.getElementsByTagName('body')[0].appendChild(s); })(document); 
+
+ </script>
+
+</body>
+</html>
